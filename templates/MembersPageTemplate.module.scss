@@ -1,0 +1,11 @@
+@media (max-width: 1500px) {
+  .gridAreaMembers {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gridAreaMembers {
+    @apply grid-cols-1;
+  }
+}

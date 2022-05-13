@@ -1,0 +1,32 @@
+.label {
+  @apply text-white 
+    text-10px leading-15px font-titillium font-semibold not-italic
+    rounded-4px py-2px w-65px;
+
+  @screen sm {
+    @apply text-14px leading-21px w-85px;
+  }
+
+  @screen md {
+    @apply py-3px w-110px;
+  }
+
+  @screen lg {
+    @apply text-30px leading-46px rounded-12px py-5px w-199px;
+  }
+}
+
+.platinum {
+  background: transparent linear-gradient(96deg, #8e8e8e 0%, #b4b4b4 21%, #898989 56%, #818181 80%, #696969 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+.gold {
+  background: transparent linear-gradient(96deg, #cb9453 0%, #c39e3b 21%, #e5c9a4 56%, #cea853 80%, #d59928 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+.diamond {
+  background: transparent linear-gradient(96deg, #4a4a4a 0%, #484848 21%, #212121 56%, #3e3e3e 80%, #0f0f0f 100%) 0% 0%
+    no-repeat padding-box;
+}

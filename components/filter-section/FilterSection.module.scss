@@ -1,0 +1,24 @@
+.dropdown_section_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  grid-template-areas: "DropdownQuarter DropdownAwardStatus" "DropdownCountry DropdownCountry";
+
+  @screen xl {
+    grid-template-columns: 23.1rem 47.2rem 35.8rem;
+    column-gap: 69px;
+    grid-template-areas: "DropdownQuarter DropdownCountry DropdownAwardStatus";
+  }
+}
+
+.dropdown_quarter_area {
+  grid-area: DropdownQuarter;
+}
+
+.dropdown_awards_status_area {
+  grid-area: DropdownAwardStatus;
+}
+
+.dropdown_county_area {
+  grid-area: DropdownCountry;
+}

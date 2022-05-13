@@ -1,0 +1,13 @@
+# example netlify.toml
+[build]
+  command = "next build"
+  functions = "netlify/functions"
+  publish = "out"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

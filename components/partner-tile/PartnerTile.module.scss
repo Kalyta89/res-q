@@ -1,0 +1,15 @@
+.partner_tile_grid {
+  grid-template-rows: 240px auto 100px 86px;
+
+  @screen md {
+    grid-template-rows: 266px auto 100px 86px;
+  }
+}
+
+.partner_tile_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

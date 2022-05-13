@@ -1,0 +1,18 @@
+.inputStyle {
+  @apply font-titillium font-normal text-20px leading-24px text-theme-blue bg-accordion-color rounded-9px border border-search-border-color;
+  @screen lg {
+    @apply text-30px leading-46px;
+  }
+}
+
+.inputStyle::placeholder {
+  @apply font-titillium font-normal text-20px leading-24px text-theme-blue pb-5px;
+  @screen lg {
+    @apply text-30px leading-46px;
+  }
+}
+
+.inputStyle:focus-visible {
+  box-shadow: 0 0 0 2px #1c5783;
+  outline: none;
+}

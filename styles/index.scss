@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  width: 100%;
+}
+
+.container {
+  @apply grid justify-items-center px-28px mx-auto w-full max-w-container;
+}
+
+.hr-line-color {
+  @apply w-full border-none bg-theme-blue bg-clip-content;
+}
+
+.hr-line {
+  @apply hr-line-color h-2px;
+}
+
+.container-hr {
+  @apply px-28px max-w-1538px h-1px hr-line-color;
+}

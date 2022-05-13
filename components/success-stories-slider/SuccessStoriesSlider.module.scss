@@ -1,0 +1,110 @@
+.containerSuccessSliderSection {
+  display: block !important;
+}
+
+.prevButton {
+  transform: scaleX(-1);
+}
+
+.containerVideoSlider {
+  @screen md {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @screen lg {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @screen xl {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  @media (min-width: 1538px) {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  @media (min-width: 1800px) {
+    margin-left: -37px;
+    margin-right: -37px;
+  }
+}
+
+.containerSlideItem {
+  max-width: 701px;
+  @media (min-width: 1538px) {
+    max-width: 640px;
+  }
+  @media (min-width: 1800px) {
+    max-width: 701px;
+  }
+}
+
+.videoContainer {
+  padding-bottom: 56.25%;
+  max-width: 701px;
+  @media (min-width: 1538px) {
+    max-width: 640px;
+  }
+  @media (min-width: 1800px) {
+    max-width: 701px;
+  }
+  @apply relative h-0px overflow-hidden mx-auto w-full;
+}
+
+.iframe {
+  @apply absolute top-0px left-0px w-full h-full;
+}
+
+.arrowButton {
+  background: no-repeat url("../../assets/pages/home/arrow-button-mobile.svg");
+  @media (min-width: 1366px) {
+    background: no-repeat url("../../assets/pages/home/arrow-button-desktop.svg");
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.arrowButtonPositionPrev {
+  right: 48px;
+  @screen md {
+    right: unset;
+    left: -60px;
+  }
+  @screen lg {
+    left: -55px;
+  }
+  @screen xl {
+    left: -90px;
+  }
+  @media (min-width: 1538px) {
+    left: -75px;
+  }
+  @media (min-width: 1800px) {
+    left: -70px;
+  }
+  @media (min-width: 1920px) {
+    left: -105px;
+  }
+}
+
+.arrowButtonPositionNext {
+  right: 2px;
+  @screen md {
+    right: -60px;
+  }
+  @screen lg {
+    right: -55px;
+  }
+  @screen xl {
+    right: -90px;
+  }
+  @media (min-width: 1538px) {
+    right: -75px;
+  }
+  @media (min-width: 1800px) {
+    right: -70px;
+  }
+  @media (min-width: 1920px) {
+    right: -105px;
+  }
+}

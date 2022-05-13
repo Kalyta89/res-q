@@ -1,0 +1,14 @@
+.icon {
+  fill: #1c5783;
+
+  &:hover {
+    fill: #507896;
+  }
+}
+
+.arrow_button_placement {
+  @apply absolute bottom-18px right-28px;
+  @media (min-width: 1801px) {
+    @apply right-86px;
+  }
+}

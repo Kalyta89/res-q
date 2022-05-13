@@ -1,0 +1,18 @@
+.cellContainer {
+  &:not(:last-child) {
+    @apply mb-3px;
+  }
+  &:nth-child(odd) > div {
+    @apply bg-white;
+  }
+  &:nth-child(even) > div {
+    @apply bg-accordion-color;
+  }
+  @screen md {
+    @apply text-center;
+
+    &:not(:last-child) {
+      @apply mb-6px;
+    }
+  }
+}

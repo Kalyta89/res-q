@@ -1,0 +1,157 @@
+.gridContactForm {
+  display: grid;
+  row-gap: 12px;
+  grid-template-areas:
+    "InputName"
+    "InputEmail"
+    "InputOrganization"
+    "SelectIssue"
+    "SelectCountry"
+    "TextAreaDescription"
+    "ButtonSubmit";
+  @screen md {
+    row-gap: 26px;
+    grid-template-columns: 1fr 4rem 1fr;
+    grid-template-areas:
+      "InputName . SelectIssue"
+      "InputEmail . TextAreaDescription"
+      "InputOrganization . TextAreaDescription"
+      "SelectCountry . TextAreaDescription"
+      ". . ButtonSubmit";
+  }
+}
+
+.gridInputNameArea {
+  grid-area: InputName;
+}
+
+.gridInputEmailArea {
+  grid-area: InputEmail;
+}
+
+.gridInputOrganizationArea {
+  grid-area: InputOrganization;
+}
+
+.gridSelectCountryArea {
+  grid-area: SelectCountry;
+}
+
+.gridSelectIssueArea {
+  grid-area: SelectIssue;
+}
+
+.gridTextAreaDescriptionArea {
+  grid-area: TextAreaDescription;
+}
+
+.gridButtonArea {
+  grid-area: ButtonSubmit;
+}
+
+.contactUsFormInput {
+  @apply h-40px md:h-56px;
+  border: 1px solid #bfbfbf;
+}
+
+.contactUsFormInputError {
+  @apply h-40px md:h-56px;
+  border: 1px solid #a81a1a;
+}
+
+.contactUsFormTextarea {
+  @apply h-151px md:h-300px;
+  border: 1px solid #bfbfbf;
+}
+
+.contactUsFormTextareaError {
+  @apply h-151px md:h-300px;
+  border: 1px solid #a81a1a;
+}
+
+.contactUsFormInputError:hover,
+.contactUsFormInputError:focus,
+.contactUsFormTextareaError:hover,
+.contactUsFormTextareaError:focus {
+  border: 1px solid #a81a1a;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1443657e;
+  z-index: 999;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
+  padding: 50px 42px 50px 50px;
+  background-color: white;
+  border: none;
+  outline: none;
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: unset;
+    top: 0%;
+    bottom: 0%;
+  }
+}
+
+.closeCrossContainer {
+  @apply absolute h-60px w-60px bg-button-light-blue-hover rounded-full -right-25px -top-25px cursor-pointer hover:bg-theme-blue;
+
+  @media (max-width: 1200px) {
+    @apply h-48px w-48px right-25px top-20px;
+  }
+}
+
+.closeCross {
+  cursor: pointer;
+  position: absolute;
+  top: 26px;
+  left: 10.5px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 8px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 1200px) {
+    top: 21px;
+    left: 9px;
+
+    &:before,
+    &:after {
+      width: 30px;
+      height: 5.5px;
+    }
+  }
+}

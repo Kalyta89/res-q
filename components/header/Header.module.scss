@@ -1,0 +1,219 @@
+.headerGrid {
+  @apply grid justify-items-center items-center z-10 w-full bg-white;
+  grid-template-rows: 11.7rem auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "HeaderLogo HeaderBurger"
+    "HeaderButtons HeaderButtons";
+
+  @media (min-width: 1050px) {
+    grid-template-rows: 3rem 7.4rem 2.9rem 6.8rem;
+    grid-template-columns: 2.8rem 24.6rem 1fr 33.2rem 2.8rem;
+    grid-template-areas:
+      ". . . . ."
+      ". HeaderLogo . HeaderButtons ."
+      ". . . . ."
+      "HeaderLinks HeaderLinks HeaderLinks HeaderLinks HeaderLinks";
+  }
+
+  @media (min-width: 1201px) {
+    grid-template-rows: 3rem 8.6rem 2.9rem 6.8rem;
+    grid-template-columns: minmax(2.8rem, 6rem) 28.8rem 1fr 33.2rem minmax(2.8rem, 6rem);
+  }
+
+  @media (min-width: 1367px) {
+    grid-template-columns: minmax(6rem, 8rem) 28.8rem minmax(2.4rem, 114.1rem) 33.2rem minmax(6rem, 8rem);
+  }
+
+  @media (min-width: 1801px) {
+    grid-template-rows: 4.8rem 8.6rem 4.2rem;
+    grid-template-columns: minmax(2.4rem, 8rem) 28.8rem minmax(2.4rem, 7.5rem) 101.7rem minmax(2.4rem, 4.9rem) 33.2rem minmax(
+        2.4rem,
+        8rem
+      );
+    grid-template-areas:
+      ". . . . . . ."
+      ". HeaderLogo . HeaderLinks . HeaderButtons ."
+      ". . . . . . .";
+  }
+}
+
+.headerModal {
+  @apply grid absolute w-full z-10 bg-white shadow-header-mobile;
+  grid-template-areas: "HeaderLinks ";
+
+  @media (min-width: 1050px) {
+    @apply hidden;
+  }
+}
+
+.headerLogoArea {
+  grid-area: HeaderLogo;
+  @apply justify-self-start w-160px h-40px ml-28px;
+
+  @media (min-width: 1050px) {
+    @apply w-246px h-74px ml-0px;
+  }
+
+  @media (min-width: 1201px) {
+    @apply w-288px h-86px;
+  }
+}
+
+.headerBurgerArea {
+  grid-area: HeaderBurger;
+  @apply justify-self-end w-39px h-39px;
+
+  @media (min-width: 1050px) {
+    @apply hidden;
+  }
+}
+
+.headerLinksWrapper {
+  grid-area: HeaderLinks;
+  @apply hidden;
+
+  @media (min-width: 1050px) {
+    @apply grid w-full h-full border-t border-theme-blue border-opacity-24;
+    grid-template-columns: 2.9rem 1fr 2.9rem;
+    grid-template-areas: ". headerLinksArea .";
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 8rem minmax(104rem, 120.2rem) 8rem;
+  }
+
+  @media (min-width: 1366px) {
+    grid-template-columns: minmax(8.2rem, 21.9rem) minmax(120.2rem, 136rem) minmax(8.2rem, 21.9rem);
+  }
+
+  @media (min-width: 1801px) {
+    @apply grid-cols-1 border-none;
+  }
+}
+
+.headerLinksArea {
+  grid-area: headerLinksArea;
+  @apply flex justify-between pt-20px;
+
+  @media (min-width: 1801px) {
+    @apply items-center p-0px;
+    & > *:not(:first-child) {
+      @apply ml-120px;
+    }
+  }
+}
+
+.headerLinksWrapperMobile {
+  grid-area: HeaderLinks;
+}
+
+.headerButtonsArea {
+  grid-area: HeaderButtons;
+  @apply hidden;
+  @media (min-width: 1050px) {
+    @apply flex;
+  }
+}
+
+.headerButtonsAreaMobile {
+  grid-area: HeaderButtons;
+  @apply flex justify-center items-center w-full text-center;
+  @media (min-width: 1050px) {
+    @apply hidden;
+  }
+}
+
+.headerSlideDown {
+  @apply top-117px transition-top duration-400 ease-in-out;
+}
+
+.headerSlideUp {
+  @apply -top-990px transition-top duration-400 ease-in-out;
+}
+
+.headerTriangle {
+  @apply transform rotate-90;
+
+  @media (min-width: 1050px) {
+    @apply transform rotate-180 duration-300 ease-out;
+  }
+}
+
+.headerDropdownMenu {
+  @apply absolute top-39px z-10 grid gap-y-19px w-350px xl:w-374px rounded-8px px-20px bg-white shadow-dropdown transition duration-300 ease-out;
+  @media (min-width: 1600px) {
+    @apply px-37px w-416px;
+  }
+}
+
+.headerMegaMenu {
+  @apply grid gap-x-30px xl:gap-x-52px absolute top-39px z-10 w-1030px xl:w-1166px rounded-8px px-20px bg-white shadow-dropdown transition duration-300 ease-out;
+  grid-template-columns: 440px auto;
+  @media (min-width: 1600px) {
+    @apply px-40px;
+    grid-template-columns: 460px auto;
+  }
+}
+
+.partnersGrid {
+  @apply grid gap-30px xl:gap-x-60px gap-y-12px;
+  grid-template-columns: 260px auto;
+}
+
+.megaMenuDropdown {
+  @apply grid justify-items-center relative;
+  @media (min-width: 1801px) {
+    @apply h-40px mt-10px;
+  }
+  &:hover {
+    .headerTriangle {
+      @media (min-width: 1050px) {
+        @apply transform rotate-0 duration-300 ease-out;
+      }
+    }
+  }
+  &:first-child > div {
+    @apply -left-25px;
+
+    @media (min-width: 1200px) {
+      @apply -left-76px;
+    }
+
+    @media (min-width: 1801px) {
+      @apply -left-232px;
+    }
+  }
+}
+
+.headerDropdown {
+  @apply grid justify-items-center relative;
+  @media (min-width: 1801px) {
+    @apply h-40px mt-10px;
+  }
+  &:hover {
+    .headerTriangle {
+      @media (min-width: 1050px) {
+        @apply transform rotate-0 duration-300 ease-out;
+      }
+    }
+  }
+  &:first-child > div {
+    @apply -left-25px;
+
+    @media (min-width: 1200px) {
+      @apply -left-76px;
+    }
+
+    @media (min-width: 1366px) {
+      @apply -left-80px;
+    }
+  }
+}
+
+.headerDropdownText {
+  @apply font-titillium font-normal not-italic text-18px leading-28px;
+  @media (min-width: 1600px) {
+    @apply text-20px leading-31px;
+  }
+}

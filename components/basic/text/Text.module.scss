@@ -1,0 +1,103 @@
+.typography_h1 {
+  @apply font-titillium font-bold not-italic text-44px leading-47px;
+
+  @screen md {
+    @apply text-78px leading-107px;
+  }
+}
+.typography_h2 {
+  @apply font-titillium font-bold not-italic text-28px leading-43px;
+
+  @screen md {
+    @apply text-50px leading-76px;
+  }
+}
+.typography_h3 {
+  @apply font-titillium font-bold not-italic text-20px leading-43px;
+
+  @screen md {
+    @apply font-semibold text-40px leading-70px;
+  }
+}
+.typography_h3_bold {
+  @apply font-titillium font-bold not-italic text-20px leading-43px;
+
+  @screen md {
+    @apply font-semibold text-40px font-bold leading-70px;
+  }
+}
+.typography_h4 {
+  @apply font-titillium font-semibold not-italic text-18px leading-31px;
+
+  @screen md {
+    @apply text-30px leading-46px;
+  }
+}
+.typography_h4_medium {
+  @apply font-titillium font-medium not-italic text-18px leading-31px;
+
+  @screen md {
+    @apply text-30px leading-46px;
+  }
+}
+.typography_body {
+  @apply font-titillium font-normal not-italic text-18px leading-29px;
+
+  @screen md {
+    @apply text-20px leading-31px;
+  }
+}
+.typography_footer {
+  @apply font-titillium font-normal not-italic text-18px leading-27px;
+}
+.typography_footer_bold {
+  @apply font-titillium font-bold not-italic text-20px leading-27px;
+}
+.typography_footer_legal {
+  @apply font-titillium font-semibold not-italic text-16px leading-24px;
+
+  @screen md {
+    @apply text-17px leading-26px;
+  }
+}
+.typography_button {
+  @apply font-quantico font-bold not-italic text-20px leading-28px;
+}
+.typography_button_bigger {
+  @apply font-quantico font-bold not-italic text-20px leading-28px;
+
+  @screen md {
+    @apply text-30px leading-43px;
+  }
+}
+.typography_button_scalable {
+  @apply font-quantico font-bold not-italic text-30px leading-43px;
+
+  @screen md {
+    @apply text-36px leading-51px;
+  }
+}
+.typography_rectangular_button {
+  @apply font-quantico font-bold not-italic text-25px leading-36px;
+}
+.typography_navigation {
+  @apply font-titillium font-bold not-italic text-20px leading-31px;
+}
+.typography_faq_accordion_content {
+  @apply font-titillium font-semibold not-italic text-18px leading-29px;
+
+  @screen md {
+    @apply text-30px leading-46px;
+  }
+}
+.typography_h1_home_hero {
+  @apply font-titillium font-bold not-italic text-44px leading-60px;
+
+  @screen md {
+    @apply text-58px leading-70px;
+  }
+
+  @screen xl {
+    @apply text-78px leading-107px;
+  }
+}

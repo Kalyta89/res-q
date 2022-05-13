@@ -1,0 +1,22 @@
+.containerGrid {
+  display: grid;
+  margin-bottom: 30px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: auto 558px;
+  }
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: 43px 85px auto;
+  column-gap: 11px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 43px 110px auto;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 43px 115px auto;
+  }
+}

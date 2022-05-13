@@ -1,0 +1,80 @@
+.biographyImageLeftGrid {
+  display: grid;
+  grid-template-columns: 13.2rem 2rem auto;
+  grid-template-rows: 13.2rem 4.2rem auto;
+  grid-template-areas:
+    "BiographyImage . BiographyTitle"
+    "BiographyLine BiographyLine BiographyLine"
+    "BiographyContent BiographyContent BiographyContent";
+
+  @screen md {
+    grid-template-columns: 30rem 3.3rem minmax(auto, 106.7rem);
+    grid-template-rows: auto;
+    grid-template-areas: "BiographyImage . BiographyContent";
+  }
+
+  @screen lg {
+    grid-template-columns: 38.2rem 3.3rem minmax(auto, 106.7rem);
+  }
+}
+
+.biographyImageRightGrid {
+  display: grid;
+  grid-template-columns: 13.2rem 2rem auto;
+  grid-template-rows: 13.2rem 4.2rem auto;
+  grid-template-areas:
+    "BiographyImage . BiographyTitle"
+    "BiographyLine BiographyLine BiographyLine"
+    "BiographyContent BiographyContent BiographyContent";
+
+  @screen md {
+    grid-template-columns: minmax(auto, 106.7rem) 3.3rem 30rem;
+    grid-template-rows: auto;
+    grid-template-areas: "BiographyContent . BiographyImage";
+  }
+
+  @screen lg {
+    grid-template-columns: minmax(auto, 106.7rem) 3.3rem 38.2rem;
+  }
+}
+
+.biographyImageGridArea {
+  grid-area: BiographyImage;
+}
+
+.biographyTitleGridArea {
+  grid-area: BiographyTitle;
+}
+
+.biographyLineGridArea {
+  grid-area: BiographyLine;
+}
+
+.biographyContentGridArea {
+  grid-area: BiographyContent;
+}
+
+.biographyButtonGridArea {
+  grid-area: BiographyButton;
+}
+
+.biographyImageFilter {
+  background: #40484e 0% 0% no-repeat padding-box;
+  mix-blend-mode: color;
+  opacity: 1;
+}
+
+.fixMobileOverflow {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.shortText {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.longText {
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+.cellContainer {
+  @apply text-center;
+
+  &:not(:last-child) {
+    @apply mb-2px md:mb-3px;
+  }
+
+  &:nth-child(even) > div {
+    background-color: #efefef;
+  }
+}
+
+.tablesGrid {
+  display: grid;
+  grid-template-columns: auto 415px;
+  @screen xl {
+    grid-template-columns: auto 545px;
+  }
+}

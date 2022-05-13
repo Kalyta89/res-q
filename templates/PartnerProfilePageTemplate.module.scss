@@ -1,0 +1,34 @@
+.subpage_grid {
+  grid-template-columns: 1fr 240px 1fr;
+  grid-template-rows: 160px auto;
+  grid-template-areas:
+    ". SubpageImage . "
+    "SubpageContent SubpageContent SubpageContent";
+
+  @screen md {
+    grid-template-columns: 1fr 365px 1fr;
+    grid-template-rows: 240px auto;
+  }
+
+  @screen lg {
+    grid-template-columns: 240px 30px auto;
+    grid-template-rows: 160px auto;
+    grid-template-areas:
+      "SubpageImage . SubpageContent"
+      ". . SubpageContent";
+  }
+
+  @screen xl {
+    grid-template-columns: 365px 64px auto;
+    grid-template-rows: 240px auto;
+  }
+}
+
+.subpage_image_area {
+  grid-area: SubpageImage;
+}
+
+.subpage_content_area {
+  grid-area: SubpageContent;
+  @apply justify-self-center lg:justify-self-auto
+}

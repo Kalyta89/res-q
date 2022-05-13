@@ -1,0 +1,7 @@
+.wrapper {
+  @apply grid justify-center gap-y-58px md:gap-x-20px lg:gap-x-58px md:grid-cols-2;
+
+  @media (min-width: 1400px) {
+    @apply xl:gap-x-131px xl:grid-cols-3;
+  }
+}

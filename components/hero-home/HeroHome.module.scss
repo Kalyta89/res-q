@@ -1,0 +1,70 @@
+.hero_image {
+  filter: brightness(0.8) !important;
+}
+
+.dots_list {
+  display: flex;
+  justify-content: space-between;
+  width: 52px;
+  margin-left: 30px;
+
+  @screen md {
+    width: 71px;
+    margin: 0 auto;
+  }
+}
+
+.dot_item {
+  background-color: #fbfbfb;
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 100%;
+  font-size: 0;
+  width: 9px;
+  height: 9px;
+
+  @screen md {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.dots_list > [class*="slick-active"] > div {
+  background-color: #fff !important;
+  opacity: 1 !important;
+}
+
+.itemsHeroContainer {
+  max-width: 1759px;
+  margin: 0 auto;
+  padding-left: 28px;
+  padding-right: 28px;
+  @media (min-width: 1201px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @media (min-width: 1367px) {
+    padding-left: 78px;
+    padding-right: 78px;
+  }
+  @media (min-width: 1801px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.itemsGrid {
+  @screen md {
+    display: grid;
+    grid-template-columns: minmax(auto, 560px) minmax(50px, auto) minmax(auto, 615px);
+    grid-template-areas: "Title . Subtitle";
+  }
+}
+
+.titleArea {
+  grid-area: Title;
+}
+
+.subtitleArea {
+  grid-area: Subtitle;
+}

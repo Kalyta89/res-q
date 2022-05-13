@@ -1,0 +1,131 @@
+.gridMediaOnRight {
+  display: grid;
+  grid-template-areas:
+    "Media"
+    "."
+    "Text";
+  grid-template-columns: minmax(auto, 102.3rem);
+  grid-template-rows: auto 41px auto;
+
+  @screen lg {
+    grid-template-columns:
+      minmax(50rem, 76.7rem)
+      minmax(0.5rem, 7.6rem)
+      minmax(40rem, 64rem);
+    grid-template-rows: auto;
+    grid-template-areas: "Text . Media";
+  }
+}
+
+.gridMediaOnLeft {
+  display: grid;
+  grid-template-areas:
+    "Media"
+    "."
+    "Text";
+  grid-template-columns: minmax(29.4rem, max-content);
+  grid-template-rows: auto 41px auto;
+
+  @screen lg {
+    grid-template-columns:
+      minmax(40rem, 63.9rem)
+      minmax(0.5rem, 7.6rem)
+      minmax(50rem, 76.8rem);
+    grid-template-rows: auto;
+    grid-template-areas: "Media . Text";
+  }
+}
+
+.gridTextArea {
+  grid-area: Text;
+}
+
+.gridMediaArea {
+  grid-area: Media;
+}
+
+.mediaTextContent {
+  ol {
+    counter-reset: section;
+    padding-top: 6px;
+    @screen md {
+      padding-top: 5px;
+      padding-bottom: 6px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      counter-increment: section;
+      padding-left: 50px;
+      margin-top: 33px;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: counter(section);
+        color: #fff;
+        background-color: #92bee6;
+        font-size: 18px;
+        font-weight: 700;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+      }
+      @screen md {
+        margin-top: 30px;
+        padding-left: 70px;
+        &:before {
+          font-size: 27px;
+          width: 39px;
+          height: 39px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+.mediaTextContent {
+  ul {
+    padding-top: 6px;
+    @screen md {
+      padding-top: 5px;
+      padding-bottom: 6px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      margin-top: 33px;
+      position: relative;
+      &:before {
+        position: absolute;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "";
+        color: #fff;
+        background-color: #92bee6;
+        font-size: 18px;
+        font-weight: 700;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+      }
+      @screen md {
+        margin-top: 30px;
+        padding-left: 70px;
+        &:before {
+          font-size: 27px;
+          width: 39px;
+          height: 39px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.cellContainer {
+  @apply text-center;
+
+  &:not(:last-child) {
+    @apply mb-2px md:mb-4px;
+  }
+}

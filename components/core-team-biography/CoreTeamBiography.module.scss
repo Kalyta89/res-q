@@ -1,0 +1,134 @@
+.biographyImageFilter {
+  background: #40484e 0% 0% no-repeat padding-box;
+  mix-blend-mode: color;
+  opacity: 1;
+}
+
+.biographyImageFilterTwo {
+  transition: all 0.1s linear;
+  height: calc(100% - 3px);
+}
+
+.biographyImageFilterTwo:hover {
+  background: #0032585e 0% 0% no-repeat padding-box;
+  mix-blend-mode: normal;
+  opacity: 1;
+  z-index: 999;
+}
+
+.modalBackground {
+  background-image: var(--modal-image);
+  background-size: cover;
+  background-position-y: 0px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1443657e;
+  z-index: 999;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 15%;
+  right: 15%;
+  background-color: white;
+  border: none;
+  outline: none;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.closeCrossContainer {
+  @apply absolute h-60px w-60px bg-button-light-blue-hover rounded-full -right-25px -top-25px cursor-pointer hover:bg-theme-blue;
+}
+
+.closeCross {
+  cursor: pointer;
+  position: absolute;
+  top: 26px;
+  left: 10.5px;
+}
+
+.closeCross:before,
+.closeCross:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  background: white;
+  border-radius: 10px;
+}
+
+.closeCross:before {
+  transform: rotate(45deg);
+}
+
+.closeCross:after {
+  transform: rotate(-45deg);
+}
+
+.modalTextWrapper {
+  padding: 50px 42px 50px 50px;
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: unset;
+    top: 0%;
+    bottom: 0%;
+  }
+
+  .modalImage {
+    height: 305px;
+  }
+
+  .modalBackground {
+    background-image: var(--modal-image);
+    background-size: 100%;
+    background-position-y: -35px;
+    background-repeat: no-repeat;
+    height: 305px;
+  }
+
+  .modalTextWrapper {
+    @apply px-28px py-30px;
+    height: calc(100% - 305px);
+  }
+
+  .closeCrossContainer {
+    @apply absolute h-48px w-48px right-25px top-20px;
+  }
+
+  .closeCross {
+    cursor: pointer;
+    position: absolute;
+    top: 21px;
+    left: 9px;
+  }
+
+  .closeCross:before,
+  .closeCross:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 5.5px;
+    background: white;
+    border-radius: 10px;
+  }
+}

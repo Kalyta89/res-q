@@ -1,0 +1,44 @@
+.footerGrid {
+  display: grid;
+  grid-template-areas:
+    "FooterImageBlock"
+    "FooterAddressBlock"
+    "FooterSocialBlock"
+    "FooterLinksBlock"
+    "FooterBorder"
+    "FooterCopyrightBlock";
+  @screen md {
+    grid-template-columns: 28.8rem auto 28.8rem;
+    grid-template-rows: 4rem auto auto auto 2.2rem auto auto;
+    grid-template-areas:
+      ". . ."
+      "FooterAddressBlock . FooterImageBlock"
+      "FooterAddressBlock . FooterLinksBlock"
+      "FooterSocialBlock . FooterLinksBlock"
+      ". . ."
+      "FooterBorder FooterBorder FooterBorder"
+      "FooterCopyrightBlock FooterCopyrightBlock FooterCopyrightBlock";
+  }
+}
+
+.footerImageArea {
+  grid-area: FooterImageBlock;
+}
+.footerLinksBlockArea {
+  grid-area: FooterLinksBlock;
+}
+.footerSocialBlockArea {
+  grid-area: FooterSocialBlock;
+}
+.footerCopyrightBlockArea {
+  grid-area: FooterCopyrightBlock;
+}
+.footerAddressBlockArea {
+  grid-area: FooterAddressBlock;
+}
+.footerSponsorBlockArea {
+  grid-area: FooterSponsorBlock;
+}
+.footerBorderArea {
+  grid-area: FooterBorder;
+}

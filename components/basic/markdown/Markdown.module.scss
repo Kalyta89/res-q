@@ -1,0 +1,88 @@
+.markdown_heading {
+  margin-bottom: 30px;
+  &:not(:first-child) {
+    margin-block-start: 30px;
+  }
+}
+
+.markdown_text {
+  &:not(:first-child) {
+    margin-block-end: 15px;
+  }
+}
+
+.markdown_ol {
+  counter-reset: section;
+  @apply mt-30px md:mt-33px mb-28px md:mb-30px;
+}
+
+.markdown_ol_li {
+  position: relative;
+  counter-increment: section;
+  padding-left: 43px;
+  display: flex;
+  justify-content: flex-start;
+
+  @screen md {
+    padding-left: 70px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 33px;
+  }
+
+  &:before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    content: counter(section);
+    color: #fff;
+    background-color: #92bee6;
+    font-size: 19px;
+    font-weight: 600;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+
+    @screen md {
+      top: -5px;
+      font-size: 28px;
+      width: 39px;
+      height: 39px;
+    }
+  }
+}
+
+.markdown_ul {
+  counter-reset: section;
+  @apply list-disc list-outside mb-17px md:mb-13px mt-17px md:mt-13px;
+}
+
+.markdown_ul_li {
+  position: relative;
+  list-style-type: none;
+  counter-increment: section;
+  @apply ml-27px;
+
+  &:not(:last-child) {
+    @apply mb-12px md:mb-11px;
+  }
+
+  &:before {
+    position: absolute;
+    content: " ";
+    left: -27px;
+    top: 14px;
+    width: 5px;
+    height: 5px;
+    background-color: #1c5783;
+    border-radius: 100%;
+
+    @screen md {
+      top: 12px;
+    }
+  }
+}

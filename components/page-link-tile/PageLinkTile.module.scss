@@ -1,0 +1,35 @@
+.gridTiles {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  column-gap: 52px;
+  row-gap: 30px;
+
+  @media (min-width: 428px) {
+    width: initial;
+  }
+
+  @media (min-width: 1026px) {
+    grid-template-columns: 460px 460px;
+    row-gap: 60px;
+  }
+
+  @media (min-width: 1541px) {
+    grid-template-columns: 460px 460px 460px;
+  }
+}
+
+.tile {
+  @media (min-width: 428px) {
+    width: 372px;
+  }
+  @media (min-width: 768px) {
+    width: 460px;
+  }
+}
+
+.grayscale {
+  filter: grayscale(1) !important;
+}

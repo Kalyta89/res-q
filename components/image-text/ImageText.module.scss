@@ -1,0 +1,27 @@
+.gridImageText {
+  display: grid;
+  grid-template-areas:
+    "Image"
+    "."
+    "Text";
+  grid-template-rows: auto 40px auto;
+  grid-template-columns: auto;
+
+  @screen md {
+    grid-template-columns:
+      minmax(30rem, 76.4rem)
+      minmax(0.5rem, 7.7rem)
+      minmax(35rem, 63.9rem);
+    grid-template-rows: auto;
+    grid-template-areas: "Text . Image";
+    align-items: center;
+  }
+}
+
+.gridTextArea {
+  grid-area: Text;
+}
+
+.gridImageArea {
+  grid-area: Image;
+}
